@@ -1,0 +1,13 @@
+.details {
+  color: var(--grey-300);
+  font-size: 0.88rem;
+  margin-right: 24px;
+
+  svg {
+    margin-right: 8px;
+  }
+}
+
+.details:last-child {
+  margin: 0;
+}

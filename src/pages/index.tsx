@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FiCalendar, FiUser } from 'react-icons/fi';
+import PostInfoWithIcon from '../components/PostInfoWithIcon';
 import { formatDate } from '../helpers/DateHelper';
 import { getPrismicClient } from '../services/prismic';
 import commonStyles from '../styles/common.module.scss';
@@ -54,14 +55,11 @@ export default function Home({ postsPagination }: HomeProps) {
                 <h3>{post.data.title}</h3>
                 <p>{post.data.subtitle}</p>
                 <div className={styles.detailsContainer}>
-                  <div className={styles.details}>
-                    <FiCalendar />
-                    <span>{formatDate(post.first_publication_date)}</span>
-                  </div>
-                  <div className={styles.details}>
-                    <FiUser />
-                    <span> {post.data.author}</span>
-                  </div>
+                  <PostInfoWithIcon
+                    icon={FiCalendar}
+                    text={formatDate(post.first_publication_date)}
+                  />
+                  <PostInfoWithIcon icon={FiUser} text={post.data.author} />
                 </div>
               </div>
             </a>

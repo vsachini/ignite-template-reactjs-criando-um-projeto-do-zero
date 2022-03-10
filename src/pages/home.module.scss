@@ -37,18 +37,5 @@
   .detailsContainer {
     display: flex;
     margin-top: 24px;
-
-    .details {
-      color: var(--grey-300);
-      font-size: 0.88rem;
-
-      svg {
-        margin-right: 8px;
-      }
-    }
-
-    .details:first-child {
-      margin-right: 24px;
-    }
   }
 }
